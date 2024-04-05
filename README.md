@@ -6,6 +6,7 @@ To get started with Kairos, follow these steps:
 1. Clone the repository: `git clone https://github.com/sarthakkapila/kairos.git`
 2. Go to main dir: `cd kairos`
 3. Create virtual env: `python -m venv kairos`
+4. Activate virtual env: `Source kairos/bin/activate` (for windows): `kairos/Scripts/activate`
 4. Install dependencies: `pip install -r requirements.txt`
 
 ## High level system design of the app
