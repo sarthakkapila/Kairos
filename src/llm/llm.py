@@ -24,5 +24,3 @@ class LLM:
             response = chain.invoke(prompt)
 
         return response
-
-
