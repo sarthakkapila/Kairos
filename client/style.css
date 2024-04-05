@@ -72,3 +72,6 @@ h1:not(#welcome-at-kevin, #configure-some-settings) {
     box-shadow: none;
     border: none;
 }
+
+footer{visibility: hidden;}
+#MainMenu {visibility: hidden;}
