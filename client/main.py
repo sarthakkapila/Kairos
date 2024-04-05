@@ -20,7 +20,7 @@ original_working_dir = os.getcwd()
 
 # Loading messages avatars
 kairos_avatar = "assets/kairos-profile.png"
-user_avatar = "assets/user-profile.png"
+user_avatar = "assets/png-clipart-computer-icons-user-profile-avatar-heroes-monochrome-thumbnail.png"
 
 
 selected_model = None
@@ -31,13 +31,13 @@ cohere_api_key = None
 st.set_page_config(layout="wide")
 
 # Set custom CSS styling
-with open("frontend/style.css") as f:
+with open("client/style.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # Initalized messages
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
-        {"role": "assistant", "content": "HI, I am Kevin! how can I help you?"}
+        {"role": "assistant", "content": "HI, I am Kairos! how can I help you?"}
     ]
 
 
@@ -47,9 +47,9 @@ def page_switcher(page):
 
 def welcome_page():
     with st.container():
-        st.title("Welcome, at Kevin!", anchor=False)
+        st.title("Welcome, at Kairos!", anchor=False)
         st.write(
-            """Kevin is an advanced AI software engineer that can understand high-level human instructions, break them down into steps, research relevant information, and write code to achieve the given objective. Kevin utilizes large language models, planning and reasoning algorithms, and web browsing abilities to intelligently develop software. \nKevin aims to revolutionize the way we build software by providing an AI pair programmer who can take on complex coding tasks with minimal human guidance. Whether you need to create a new feature, fix a bug, or develop an entire project from scratch, Kevin is here to assist you."""
+            """Kairos is an advanced AI software engineer that can understand high-level human instructions, break them down into steps, research relevant information, and write code to achieve the given objective. Kairos utilizes large language models, planning and reasoning algorithms, and web browsing abilities to intelligently develop software. \nKairos aims to revolutionize the way we build software by providing an AI pair programmer who can take on complex coding tasks with minimal human guidance. Whether you need to create a new feature, fix a bug, or develop an entire project from scratch, Kairos is here to assist you."""
         )
         btn = st.button("Start Now", on_click=page_switcher, args=(configuration_page,))
         if btn:
@@ -130,13 +130,13 @@ def workspace_page():
     # Splitting screen into 2 columns
     col1, col2 = st.columns(2)
 
-    # Kevin Workspace
+    # Workspace
     with col2:
         workspace = st.container(height=620, border=True)
         with workspace:
-            st.title("Kevin Workspace", anchor=False)
+            st.title("Kairos Workspace", anchor=False)
             tab1, tab2, tab3, tab4 = st.tabs(
-                ["Kevin Planner", "Kevin Browser", "Kevin Coder", "Kevin Project"]
+                ["Planner", "Browser", "Coder", "Project"]
             )
 
             with tab1:
@@ -151,31 +151,31 @@ def workspace_page():
             with tab4:
                 project_area = st.container()
 
-    # Kevin Chat
-    prompt = st.chat_input(placeholder="Talk to Kevin")
+    # Chat
+    prompt = st.chat_input(placeholder="Talk to Kairos")
     with col1:
         chat = st.container(height=620, border=True)
 
         with chat:
-            st.title("Kevin Chat", anchor=False)
+            st.title("Kairos Chat", anchor=False)
 
             # Displaying messages
             for message in st.session_state.messages:
-                avatar = mohammed_avatar if message["role"] == "user" else kevin_avatar
+                avatar = user_avatar if message["role"] == "user" else kairos_avatar
                 st.chat_message(message["role"], avatar=avatar).write(
                     message["content"]
                 )
 
             # Processing user prompt
             if prompt:
-                st.chat_message("user", avatar=mohammed_avatar).write(prompt)
+                st.chat_message("user", avatar=user_avatar).write(prompt)
                 st.session_state.messages.append({"role": "user", "content": prompt})
 
                 with st.spinner("Processing your prompt ..."):
                     response = decision_taker.execute(prompt)[0]
 
                 if response["function"] == "ordinary_conversation":
-                    st.chat_message("ai", avatar=kevin_avatar).write_stream(
+                    st.chat_message("ai", avatar=kairos_avatar).write_stream(
                         stream_text(response["reply"])
                     )
                     st.session_state.messages.append(
@@ -183,7 +183,7 @@ def workspace_page():
                     )
 
                 elif response["function"] == "coding_project":
-                    st.chat_message("ai", avatar=kevin_avatar).write_stream(
+                    st.chat_message("ai", avatar=kairos_avatar).write_stream(
                         stream_text("Idenified your request as a `coding_project`! ")
                     )
                     st.session_state.messages.append(
@@ -203,14 +203,14 @@ def workspace_page():
 
                     project_name = planner_json_response["project"]
 
-                    st.chat_message("ai", avatar=kevin_avatar).write_stream(
+                    st.chat_message("ai", avatar=kairos_avatar).write_stream(
                         stream_text(model_reply)
                     )
                     st.session_state.messages.append(
                         {"role": "ai", "content": model_reply}
                     )
 
-                    # Write the generated plan in the Kevin Planner tab
+                    # Write the generated plan in the Kairos Planner tab
                     with planner_area:
                         plan_and_summary = generated_plan[
                             generated_plan.index("Plan") : -3
@@ -226,15 +226,15 @@ def workspace_page():
                         keyword_extractor = SentenceBert()
                         keywords = keyword_extractor.extract_keywords(prompt)
 
-                    st.chat_message("ai", avatar=kevin_avatar).write_stream(
+                    st.chat_message("ai", avatar=kairos_avatar).write_stream(
                         stream_text(
-                            "I correctly identified the relevant keywords in your prompt at `Kevin Browser` tab"
+                            "I correctly identified the relevant keywords in your prompt at `Kairos Browser` tab"
                         )
                     )
                     st.session_state.messages.append(
                         {
                             "role": "ai",
-                            "content": "I correctly identified the relevant keywords in your prompt at `Kevin Browser` tab",
+                            "content": "I correctly identified the relevant keywords in your prompt at `Kairos Browser` tab",
                         }
                     )
 
@@ -254,15 +254,15 @@ def workspace_page():
                     with st.spinner("Generating search queries ..."):
                         reseacher_output = reseacher.execute(plan_and_summary, keywords)
 
-                    st.chat_message("ai", avatar=kevin_avatar).write_stream(
+                    st.chat_message("ai", avatar=kairos_avatar).write_stream(
                         stream_text(
-                            "I 've just generated contextual search queries. Check the `Kevin Browser` tab"
+                            "I 've just generated contextual search queries. Check the `Kairos Browser` tab"
                         )
                     )
                     st.session_state.messages.append(
                         {
                             "role": "ai",
-                            "content": "I 've just generated contextual search queries. Check the `Kevin Browser` tab",
+                            "content": "I 've just generated contextual search queries. Check the `Kairos Browser` tab",
                         }
                     )
 
@@ -272,7 +272,7 @@ def workspace_page():
                             st.info(f"Query #{i+1}: {query}")
 
                     model_reply = f"I am doing my research for the following queries on the web: `{ ', '.join(reseacher_output['queries']) }` "
-                    st.chat_message("ai", avatar=kevin_avatar).write_stream(
+                    st.chat_message("ai", avatar=kairos_avatar).write_stream(
                         stream_text(model_reply)
                     )
                     st.session_state.messages.append(
@@ -287,8 +287,8 @@ def workspace_page():
                         st.write_stream(stream_text("Queries results: "))
                         st.write(queries_result)
 
-                    model_reply = f"Results of `{', '.join(reseacher_output['queries'])}` retrieved successfully. Check out the `Kevin Browser` tab to take a look."
-                    st.chat_message("ai", avatar=kevin_avatar).write_stream(
+                    model_reply = f"Results of `{', '.join(reseacher_output['queries'])}` retrieved successfully. Check out the `Kairos Browser` tab to take a look."
+                    st.chat_message("ai", avatar=kairos_avatar).write_stream(
                         stream_text(model_reply)
                     )
                     st.session_state.messages.append(
@@ -307,7 +307,7 @@ def workspace_page():
                             queries_result,
                         )
 
-                    with st.spinner("Writing code at the `Kevin Coder` tab ..."):
+                    with st.spinner("Writing code at the `Kairos Coder` tab ..."):
                         with coder_area:
                             for item in coder_output:
                                 st.write_stream(
@@ -315,15 +315,15 @@ def workspace_page():
                                 )
                                 st.write_stream(stream_text(item["code"]))
 
-                    st.chat_message("ai", avatar=kevin_avatar).write_stream(
+                    st.chat_message("ai", avatar=kairos_avatar).write_stream(
                         stream_text(
-                            f"I finished generating the code for `{project_name}`. Check out the `Kevin Coder` tab"
+                            f"I finished generating the code for `{project_name}`. Check out the `Kairos Coder` tab"
                         )
                     )
                     st.session_state.messages.append(
                         {
                             "role": "ai",
-                            "content": f"I finished generating the code for `{project_name}`. Check out the `Kevin Coder` tab",
+                            "content": f"I finished generating the code for `{project_name}`. Check out the `Kairos Coder` tab",
                         }
                     )
 
@@ -346,7 +346,7 @@ def workspace_page():
 
                                 with chat:
                                     st.chat_message(
-                                        "ai", avatar=kevin_avatar
+                                        "ai", avatar=kairos_avatar
                                     ).write_stream(stream_text(project_output["reply"]))
                                     st.session_state.messages.append(
                                         {
@@ -363,7 +363,7 @@ def workspace_page():
 
                                 with chat:
                                     st.chat_message(
-                                        "ai", avatar=kevin_avatar
+                                        "ai", avatar=kairos_avatar
                                     ).write_stream(
                                         stream_text(
                                             "Sorry, I made something wrong, I will try again!"
