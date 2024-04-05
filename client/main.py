@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/Users/sarthakkapila/Desktop/kairos/Kairos")
+sys.path.append("D:/Kairos-final/Kairos")
 
 import os
 import time
@@ -49,7 +49,7 @@ def welcome_page():
     with st.container():
         st.title("Welcome, at Kairos!", anchor=False)
         st.write(
-            """Kairos is an advanced AI software engineer that can understand high-level human instructions, break them down into steps, research relevant information, and write code to achieve the given objective. Kairos utilizes large language models, planning and reasoning algorithms, and web browsing abilities to intelligently develop software. \nKairos aims to revolutionize the way we build software by providing an AI pair programmer who can take on complex coding tasks with minimal human guidance. Whether you need to create a new feature, fix a bug, or develop an entire project from scratch, Kairos is here to assist you."""
+            """Kairos is an advanced AI software engineer that can understand high-level human instructions, break them down into steps, research relevant information, and write code to achieve the given objective. """
         )
         btn = st.button("Start Now", on_click=page_switcher, args=(configuration_page,))
         if btn:
