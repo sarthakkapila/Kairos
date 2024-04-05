@@ -1,5 +1,5 @@
 import sys
-sys.path.append("D:/Kairos-final/Kairos")
+sys.path.append("/Users/sarthakkapila/Desktop/kairos/Kairos")
 
 import os
 import time
