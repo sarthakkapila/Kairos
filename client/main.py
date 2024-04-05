@@ -46,17 +46,18 @@ def page_switcher(page):
     st.session_state.runpage = page
 
 
+
+# st.markdown(btn_style, unsafe_allow_html=True)
+
 def welcome_page():
     with st.container():
         st.title("Welcome to Kairos!", anchor=False)
         st.write(
             """Kairos is an advanced AI software engineer that can understand high-level human instructions, break them down into steps, research relevant information, and write code to achieve the given objective. """
         )
-
-        btn = st.button("Start Now", on_click=page_switcher, args=(configuration_page,))
-
-        st.image(image="assets/kairos-profile.png", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")       
-
+        st.markdown("<center>", unsafe_allow_html=True)
+        btn = st.button(label="Start Now", on_click=page_switcher, args=(configuration_page,), type="primary")
+        st.markdown("</center>", unsafe_allow_html=True)        
         if btn:
             st.rerun()
 
@@ -95,7 +96,7 @@ def configuration_page():
             "Project name", placeholder="Enter your project name", value="My-Project"
         )
 
-    created = st.button("Create")
+    created = st.button("Create", type="primary")
 
     if created:
         if project_name:
