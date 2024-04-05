@@ -64,6 +64,9 @@ h1:not(#welcome-at-kevin, #configure-some-settings) {
     border: none;
 }
 
+.stDeployButton {
+    visibility: hidden;
+}
 .st-emotion-cache-1kqucs1:focus {
     color: #fff !important;
     box-shadow: none;

@@ -1,6 +1,6 @@
 import sys
-# sys.path.append("/Users/sarthakkapila/Desktop/kairos/Kairos")
-sys.path.append("C:/Users/Asus/Desktop/kairos-final/Kairos")
+sys.path.append("/Users/sarthakkapila/Desktop/kairos/Kairos")
+# sys.path.append("C:/Users/Asus/Desktop/kairos-final/Kairos")
 
 import os
 import time
@@ -57,7 +57,7 @@ def welcome_page():
         )
         st.markdown("<center>", unsafe_allow_html=True)
         btn = st.button(label="Start Now", on_click=page_switcher, args=(configuration_page,), type="primary")
-        st.image(image="C:/Users/Asus/Desktop/kairos-final/Kairos/assets/kairos-profile.png", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+        st.image(image="assets/kairos-profile.png", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
 
         st.markdown("</center>", unsafe_allow_html=True)        
