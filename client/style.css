@@ -13,15 +13,15 @@
 }
 
 p {
-    font-size: 8px !important;
-    font-weight: 500;
+    font-size: 18px !important;
+    font-weight: 500;    
 }
 
 h1:not(#welcome-at-kevin, #configure-some-settings) {
     width: 30% !important;
     font-weight: 400 !important;
     margin-bottom: calc(1rem);
-    font-size: 10px;
+    font-size: 20px;
     border-top: 5px solid #3572ff;
 
     color: #46494c;
@@ -38,6 +38,7 @@ h1:not(#welcome-at-kevin, #configure-some-settings) {
 
 .st-emotion-cache-j78z8c {
     padding-left: 20px !important;
+    margin: 0;
 }
 
 .block-container.st-emotion-cache-z5fcl4.ea3mdgi5:nth-child(1) {
