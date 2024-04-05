@@ -53,6 +53,9 @@ def welcome_page():
             """Kairos is an advanced AI software engineer that can understand high-level human instructions, break them down into steps, research relevant information, and write code to achieve the given objective. """
         )
         btn = st.button("Start Now", on_click=page_switcher, args=(configuration_page,))
+
+        st.image(image="assets/kairos-profile.png", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")       
+
         if btn:
             st.rerun()
 
