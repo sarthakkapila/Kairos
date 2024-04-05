@@ -55,6 +55,10 @@ h1:not(#welcome-at-kevin, #configure-some-settings) {
     transition: 0.4s;
 }
 
+.stDeployButton {
+    visibility: hidden;
+}
+
 .st-emotion-cache-1kqucs1:hover {
     box-shadow: 0 0 0 5px #c0d3ff;
     color: #fff;
