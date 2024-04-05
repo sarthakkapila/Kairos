@@ -9,23 +9,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Outfit:wght@100..900&display=swap');
 
 * {
-    font-family: 'Cairo', sans-serif !important;
+    font-family: Monaco, monospace !important;
 }
 
 p {
-    font-size: 18px !important;
-    font-weight: 500;    
+    font-size: 20px !important;
+    font-weight: 400;    
 }
 
 h1:not(#welcome-at-kevin, #configure-some-settings) {
-    width: 30% !important;
-    font-weight: 400 !important;
+    width: 100% !important;
+    font-weight: 900 !important;
     margin-bottom: calc(1rem);
-    font-size: 20px;
-    border-top: 5px solid #3572ff;
+    font-size: 60px;
 
-    color: #46494c;
-    background-color: #f1f5f7;
+
+    color: #ffffff;
 
     /* color: #ffffff;
     background-color: #30303a; */

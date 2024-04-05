@@ -48,7 +48,7 @@ def page_switcher(page):
 
 def welcome_page():
     with st.container():
-        st.title("Welcome, at Kairos!", anchor=False)
+        st.title("Welcome to Kairos!", anchor=False)
         st.write(
             """Kairos is an advanced AI software engineer that can understand high-level human instructions, break them down into steps, research relevant information, and write code to achieve the given objective. """
         )
