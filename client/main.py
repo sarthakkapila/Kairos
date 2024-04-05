@@ -23,7 +23,6 @@ original_working_dir = os.getcwd()
 kairos_avatar = "assets/kairos-profile.png"
 user_avatar = "assets/user-profile.jpg"
 
-
 selected_model = None
 google_api_key = None
 cohere_api_key = None
@@ -44,8 +43,6 @@ if "messages" not in st.session_state:
 
 def page_switcher(page):
     st.session_state.runpage = page
-
-
 
 # st.markdown(btn_style, unsafe_allow_html=True)
 

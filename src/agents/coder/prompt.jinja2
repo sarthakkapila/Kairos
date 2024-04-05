@@ -19,7 +19,7 @@ Result:
 ---
 {% endfor %}
 
-Read the step-by-step plan carefully. Think step-by-step. Use relevant information from the retrieved search results. Then write the code to implement the step-by-step plan.
+Read the step-by-step plan carefully. Think step-by-step CAREFULLY. Use relevant information from the retrieved search results. Then write the code to implement the step-by-step plan.
 
 Your response should only be in the following Markdown format:
 
@@ -60,8 +60,8 @@ Rules:
 - The example code in the knowledge base might be using something else than what you should be doing based on the step-by-step plan. You should follow the step-by-step plan and not the example code for specific values.
 - The extension used for the Markdown code blocks should be 100% accurate.
 - Nested directories should be specified in the Markdown filename, the code structure should be accurate. If it requires to be nested in order to work, then it should be nested.
-- You need to include required files for the code to run. Like: requirements.txt, Cargo.toml, etc.
-- Files like Cargo.toml are mandatory to be included, the project won't work without it.
+- You need to include required files for the code to run. Like: requirements.txt, Cargo.toml, reamde.md and other files like this.
+- Files like Cargo.toml, requirements.txt, readme.md are mandatory to be included, the project won't work without it.
 
 Any response other than this format will be rejected. You should not refuse to complete the task, you should try your absolute best and if there's any implementation detail that's impossible to complete, you should write a comment in the code explaining why it's impossible to complete. The refusal is only a last resort, it should never happen.
 

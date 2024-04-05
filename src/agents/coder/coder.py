@@ -2,8 +2,8 @@ from jinja2 import Environment, BaseLoader
 
 from src.llm import LLM
 
-
 coder_prompt = open("src/agents/coder/prompt.jinja2").read().strip()
+
 
 
 class Coder:
