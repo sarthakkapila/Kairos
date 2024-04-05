@@ -55,12 +55,16 @@ def welcome_page():
         st.write(
             """Kairos is an advanced AI software engineer that can understand high-level human instructions, break them down into steps, research relevant information, and write code to achieve the given objective. """
         )
-        st.markdown("<center>", unsafe_allow_html=True)
-        btn = st.button(label="Start Now", on_click=page_switcher, args=(configuration_page,), type="primary")
+        
+        
+        # st.markdown("----", unsafe_allow_html=True)
+        columns = st.columns((1, 1, 1))
+        button_pressed = columns[1].button(label="Start Now", on_click=page_switcher, args=(configuration_page,), type="primary")
+        # st.markdown("----", unsafe_allow_html=True)
+        
+        # btn = st.button(label="Start Now", on_click=page_switcher, args=(configuration_page,), type="primary")
         st.image(image="assets/kairos-profile.png", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
-
-        st.markdown("</center>", unsafe_allow_html=True)        
         if btn:
             st.rerun()
 
