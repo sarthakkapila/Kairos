@@ -29,8 +29,8 @@ h1:not(#welcome-at-kevin, #configure-some-settings) {
     /* color: #ffffff;
     background-color: #30303a; */
 
-    padding: 8px 0;
-    padding-left: 20px;
+    /* padding: 8px 0; */
+    padding-left: -20px;
     padding-right: -20px;
     border-radius: 0.2rem;
 }
@@ -39,6 +39,7 @@ h1:not(#welcome-at-kevin, #configure-some-settings) {
     padding-left: 20px !important;
     margin: 0;
 }
+
 
 .block-container.st-emotion-cache-z5fcl4.ea3mdgi5:nth-child(1) {
     max-width: 800px;
@@ -53,6 +54,7 @@ h1:not(#welcome-at-kevin, #configure-some-settings) {
     width: 30%;
     height: 40px;
     transition: 0.4s;
+    justify-content: center;
 }
 
 .st-emotion-cache-1kqucs1:hover {
