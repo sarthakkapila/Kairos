@@ -21,7 +21,7 @@ original_working_dir = os.getcwd()
 
 # Loading messages avatars
 kairos_avatar = "assets/kairos-profile.png"
-user_avatar = "assets/png-clipart-computer-icons-user-profile-avatar-heroes-monochrome-thumbnail.png"
+user_avatar = "assets/user-profile.jpg"
 
 
 selected_model = None
