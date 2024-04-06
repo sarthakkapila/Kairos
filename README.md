@@ -1,6 +1,6 @@
 # Kairos
 
-## Getting Started
+## Getting Started 
 To get started with Kairos, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/sarthakkapila/kairos.git`
@@ -9,7 +9,10 @@ To get started with Kairos, follow these steps:
 4. Activate virtual env: `Source kairos/bin/activate` (for windows): `kairos/Scripts/activate`
 4. Install dependencies: `pip install -r requirements.txt`
 
-## High level system design of the app
+## Interactive Demo 
+[Kairos Demo](https://app.supademo.com/demo/clune6g8803vu4r8tlrbbf6nj/cluoesk4f10ye41u920f8uy0z)
+
+## High level system design of the app 
 ### Workflow of kairos
 
 The high level workflow is divided into different steps.
@@ -35,6 +38,7 @@ To extract the keywords we have employed BERT model which divides the prompt int
 Working of bert: the Bert model is used to extract the keywords and rank them based on their relevance to the user's prompt.
 Kairos then pinpoints each part performs a research on it using Researcher Agent , retrieving information for task.
 
+
 ### Researcher
 Researcher agent maintain search queries, which expands its knowledge base.
 Based on the contextual keywords extracted above, Kairos creates helpful search queries that can be emplyed with the googlesearch-py.
@@ -57,8 +61,20 @@ Finally, Kairos's Creator agent generates and executes Python code to create and
 Following the code generation, Kairos initiates the creation of a Python script utilizing the os module.
 Then it begins organizing the project files and folders generated previously during the coding phase of the project.
 
+## Screenshots
+<img width="938" alt="Screenshot 2024-04-06 at 11 01 44 PM" src="https://github.com/sarthakkapila/Kairos/assets/112886451/29e25360-5207-45ae-9a46-7e95608057dd">
+<img width="997" alt="Screenshot 2024-04-06 at 11 02 08 PM" src="https://github.com/sarthakkapila/Kairos/assets/112886451/3ecff9dd-8a29-4c40-8020-09be12f95067">
+<img width="1534" alt="Screenshot 2024-04-06 at 11 03 28 PM" src="https://github.com/sarthakkapila/Kairos/assets/112886451/2fcd2886-ed49-4f35-8cb5-f259f44bf9d5">
+<img width="787" alt="Screenshot 2024-04-06 at 11 09 06 PM" src="https://github.com/sarthakkapila/Kairos/assets/112886451/38754847-f2b5-48b9-a907-f2560ff0347c">
+<img width="704" alt="Screenshot 2024-04-06 at 11 08 29 PM" src="https://github.com/sarthakkapila/Kairos/assets/112886451/c205438e-0906-47f5-8be1-b43d1ef32f45">
+<img width="725" alt="Screenshot 2024-04-06 at 11 08 41 PM" src="https://github.com/sarthakkapila/Kairos/assets/112886451/6b1ab81b-a280-4a73-9e7c-6f44edffdef6">
+<img width="727" alt="Screenshot 2024-04-06 at 11 08 51 PM" src="https://github.com/sarthakkapila/Kairos/assets/112886451/28e6a7b3-e585-4042-b7e9-aea08ef4fe16">
+<img width="817" alt="Screenshot 2024-04-06 at 11 09 28 PM" src="https://github.com/sarthakkapila/Kairos/assets/112886451/46b454b0-e2f6-4b87-be83-2675154817a5">
+<img width="779" alt="Screenshot 2024-04-06 at 11 09 22 PM" src="https://github.com/sarthakkapila/Kairos/assets/112886451/b68dbb69-b626-41e8-8cc5-df002f51b8a3">
+<img width="889" alt="Screenshot 2024-04-06 at 7 25 20 AM" src="https://github.com/sarthakkapila/Kairos/assets/112886451/ee1eceb6-7859-4793-9247-df9b1a00d220">
+<img width="787" alt="Screenshot 2024-04-06 at 11 09 16 PM" src="https://github.com/sarthakkapila/Kairos/assets/112886451/31fa45f6-d05a-4977-ac12-2d4f8e1d0f7f">
 
-## Team members - 100X-Devs
+## Team - 100X-Devs
 - Sarthak Kapila (22107038)
 - Shauray Dhingra (22107060)
 - Karanveer Singh (22101003)
