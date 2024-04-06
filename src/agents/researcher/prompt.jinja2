@@ -16,102 +16,60 @@ Only respond in the following JSON format:
     "ask_user": "<ASK INPUT FROM USER>"
 }
 ```
-
-Keywords for Search Query: {{ contextual_keywords }}
 ~~~
 # Example Queries
 
 This file contains example queries that can be used to test a code-researching AI agent.
+Keywords for Search Query: {{ contextual_keywords }}
+~~~
+# Example Queries
 
-**Query 1: Bing Search with Python**
+Example "queries": ["How to do Bing Search via API in Python", "Claude API Documentation Python"]
+Example "ask_user": ["Can you please provide API Keys for Claude, OpenAI, and Firebase?"]
+Example Query:["How to implement user authentication using Passport.js in a MEAN stack application?"]
 
-```
-**User Prompt:** How to do Bing Search via API in Python
+Example Query:["Integrate Stripe payment gateway into a MERN stack e-commerce application"]
 
-**Search Queries:**
-  * Bing Search API Python
-  * How to use Bing Search API Python
+Example Query:["Set up WebSocket communication with Socket.io in a LAMP stack chat application"]
+Example Query:["Implement role-based access control using Laravel for a React and MySQL application"]
 
-**Expected Output:**
+Example Query: ["Integrate Algolia for search functionality in a MEVN stack blog application"]
 
-  * The code should use the requests library to send a GET request to the Bing Search API endpoint.
-  * The API key should be passed in the headers and the search query parameters should be included in the URL.
-  * The response should be parsed as JSON and relevant data should be extracted.
+Example Query: ["Implement file upload functionality using multer in a Django and Angular application"]
 
-**Language Preference:** Python
-```
+Example Query: ["Build a GraphQL API with Apollo Server and MongoDB for a Vue.js frontend"]
 
-**Query 2: Claude API Documentation**
+Example Query: ["Add Google Places autocomplete to a full-stack travel planning application built with Flask and React"]
 
-```
-**User Prompt:** Claude API Documentation Python
+Example Query: ["Implement OAuth2 authentication with Firebase in a full-stack recipe sharing app"]
 
-**Search Queries:**
-  * Claude API Python documentation
-  * Claude AI Python library
+Example Query: ["Set up continuous integration with GitLab CI for a full-stack application deployed on Heroku"]
 
-**Expected Output:**
+Example "ask_user": ["Please provide API keys or access tokens for the following services: Stripe, Algolia, and Firebase."]
 
-  * The response should contain links to the official Claude API documentation for Python.
-  * It can optionally include code examples demonstrating how to use the Claude API in Python.
+Example Query: ["How to implement user authentication with JWT in a MERN stack application?"]
 
-**Language Preference:** N/A (Documentation)
-```
+Example Query: ["Integrate PayPal checkout into a MEAN stack e-commerce app"]
 
-**Query 3: API Keys**
+Example Query: ["Set up real-time messaging with Socket.io in a full-stack chat application"]
 
-```
-**User Prompt:** Can you please provide API Keys for Claude, OpenAI, and Firebase?
+Example Query: ["Implement role-based access control in a LAMP stack web application"]
 
-**Search Queries:**
+Example Query: ["Integrate Elasticsearch for search functionality in a full-stack blog application"]
 
-  * Obtaining API Key for Claude
-  * Generate API Key for OpenAI
-  * Firebase API Key creation
+Example Query: ["Implement file upload functionality using Multer in a Django and React application"]
 
-**Expected Output:**
+Example Query: ["Build a RESTful API with Express and MongoDB for a Vue.js frontend"]
 
-  * The response should inform the user that API keys are typically obtained by creating accounts on the respective platforms (Claude, OpenAI, Firebase).
-  * It can include links to the signup or API key management pages for each platform.
+Example Query: ["Add Google Maps integration to a full-stack travel planning application"]
 
-**Language Preference:** N/A (Informational)
-```
+Example Query: ["Implement GraphQL for data querying in a full-stack recipe sharing app"]
 
-**Query 4: Web Scraping with Beautiful Soup**
+Example Query: ["Set up CI/CD pipeline with Jenkins for a full-stack application deployed on AWS"]
 
-```
-**User Prompt:**  How to scrape product data from an e-commerce website using Python
+Example "ask_user": ["Can you provide API keys or access tokens for the following services: PayPal, Google Maps, and Elasticsearch?"]
+This file contains example queries that can be used to test a code-researching AI agent.
 
-**Search Queries:**
-  * Web scraping with Beautiful Soup Python
-  * Extract product data from website Python
-
-**Expected Output:**
-
-  * The code should use the Beautiful Soup library to parse the HTML content of the e-commerce website.
-  * It should identify and extract relevant product data (e.g., name, price, description).
-
-**Language Preference:** Python
-```
-
-**Query 5: Data Visualization with Matplotlib**
-
-```
-**User Prompt:** How to create a bar chart to visualize sales data in Python
-
-**Search Queries:**
-  * Create bar chart with Matplotlib Python
-  * Sales data visualization Python
-
-**Expected Output:**
-
-  * The code should use the Matplotlib library to generate a bar chart representing the sales data.
-  * The chart should be labeled and formatted appropriately.
-
-**Language Preference:** Python
-```
-
-These are just a few examples, you can create many more queries based on different programming languages, libraries, and tasks.
 ~~~
 
 Rules:
