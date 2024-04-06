@@ -1,9 +1,9 @@
 from jinja2 import Environment, BaseLoader
 
-from src.llm import LLM
+from llm import LLM
 
 
-planner_prompt = open("src/agents/planner/prompt.jinja2").read().strip()
+planner_prompt = open("client/agents/planner/prompt.jinja2").read().strip()
 
 
 class Planner:

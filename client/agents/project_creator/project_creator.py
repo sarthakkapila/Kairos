@@ -2,10 +2,10 @@ import re
 import json
 from jinja2 import Environment, BaseLoader
 
-from src.llm import LLM
+from llm import LLM
 
 
-project_creator_prompt = open("src/agents/project_creator/prompt.jinja2").read().strip()
+project_creator_prompt = open("client/agents/project_creator/prompt.jinja2").read().strip()
 
 
 class ProjectCreator:

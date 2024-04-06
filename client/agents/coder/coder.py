@@ -1,8 +1,8 @@
 from jinja2 import Environment, BaseLoader
 
-from src.llm import LLM
+from llm import LLM
 
-coder_prompt = open("src/agents/coder/prompt.jinja2").read().strip()
+coder_prompt = open("client/agents/coder/prompt.jinja2").read().strip()
 
 
 

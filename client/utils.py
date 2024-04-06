@@ -1,8 +1,8 @@
 import re
 import time
 
-from src.browser import GoogleSearch
-from src.browser import Browser
+from browser import GoogleSearch
+from browser import Browser
 
 
 browser = Browser()

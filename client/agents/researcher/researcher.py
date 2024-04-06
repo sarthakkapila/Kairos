@@ -2,10 +2,10 @@ import json
 
 from jinja2 import Environment, BaseLoader
 
-from src.llm import LLM
+from llm import LLM
 
 
-researcher_prompt = open("src/agents/researcher/prompt.jinja2").read().strip()
+researcher_prompt = open("client/agents/researcher/prompt.jinja2").read().strip()
 
 
 class Researcher:
