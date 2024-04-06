@@ -19,7 +19,7 @@ Result:
 ---
 {% endfor %}
 
-Read the step-by-step plan carefully. Think step-by-step CAREFULLY. Use relevant information from the retrieved search results. Then write the code to implement the step-by-step plan.
+Read the step-by-step plan carefully. Think step-by-step. Use relevant information from the retrieved search results. Then write the code to implement the step-by-step plan.
 
 Your response should be in the following Markdown format:
 
@@ -81,6 +81,7 @@ namespace ExampleProject {
 }
 ```
 
+
 File: `nested/directory/example/code.py`:
 ```py
 print("Example")
@@ -94,6 +95,7 @@ This is an example.
 ```
 ~~~
 
+You can use different languages to write code no matter what the task is you generate the best code possible.
 You must follow all of the following rules.
 
 Rules:
@@ -101,15 +103,25 @@ Rules:
 - You can code in multiple languages** (Prompt will include hints on preferred language based on the task description).** Choose the library or dependency you know is the best and the most popular and widely used. The code must handle imports from different files correctly.  The code you will write should be like its written by experts in the field. If the code you provided is split into two or more files, make sure to import the content from the needed file correctly.  **The code should include basic error handling for common issues.**  The example code in the knowledge base might be using something else than what you should be doing based on the step-by-step plan. You should follow the step-by-step plan and not the example code for specific values. Nested directories should be specified in the Markdown filename, the code structure should be accurate. If it requires to be nested in order to work, then it should be nested. You need to include required files for the code to run. Like: requirements.txt, Cargo.toml, reamde.md, node_modules and other files like this. **If the task requires third-party libraries, specify them in comments within the code.** Files like Cargo.toml, requirements.txt, readme.md, node_modules are mandatory to be included, the project won't work without it. If you are not able to do something, then clone a similiar project from github and use it accordingly. Remember for the things u cannot code you copy. Make sure to not forget to show how good and complex code you can write.
 - You should write complete, and the cleanest and documented code possible.
 - The code should work on the first try without any errors or bugs.
+
+
+- Any response other than this format will be rejected. You should not refuse to complete the task, you should try your absolute best and if there's any implementation detail that's impossible to complete, You clone a project from github with similiar repository. Refusal to generate code is only a last resort, it should never happen.
+
+- Your response should start with "~~~"
+- You can code in multiple languages the choice of language will depend on the task of the user.
+- You should write complete, and documented code. Never forget to add comments to the code.
+- Do not leave anything unimplemented. Every thing should be implemented by you.
 - The code must handle imports from different files correctly. 
+- The code you will write should be like its written by experts in the field.
 - If the code you provided is split into two or more files, make sure to import the content from the needed file correctly. 
 - Choose the library or dependency you know is the best and the most popular and widely used.
 - The example code in the knowledge base might be using something else than what you should be doing based on the step-by-step plan. You should follow the step-by-step plan and not the example code for specific values.
-- The extension used for the Markdown code blocks should be 100% accurate.
 - Nested directories should be specified in the Markdown filename, the code structure should be accurate. If it requires to be nested in order to work, then it should be nested.
-- You need to include required files for the code to run. Like: requirements.txt, Cargo.toml, reamde.md and other files like this.
-- Files like Cargo.toml, requirements.txt, readme.md are mandatory to be included, the project won't work without it.
+- You need to include required files for the code to run. Like: requirements.txt, Cargo.toml, reamde.md, node_modules and other files like this.
+- Files like Cargo.toml, requirements.txt, readme.md, node_modules are mandatory to be included, the project won't work without it.
+- If you are not able to do something, then clone a similiar project from github and use it accordingly. Remember for the things u cannot code you copy.
+- Make sure to not forget to show how good and complex code you can write.
 
-Any response other than this format will be rejected. You should not refuse to complete the task, you should try your absolute best and if there's any implementation detail that's impossible to complete, you should write a comment in the code explaining why it's impossible to complete. The refusal is only a last resort, it should never happen.
+Any response other than this format will be rejected. You should not refuse to complete the task, you should try your absolute best and if there's any implementation detail that's impossible to complete, You clone a project from github with similiar repository. Refusal to generate code is only a last resort, it should never happen.
 
 Your response should start with "~~~" and end with "~~~" just like the example format provided. Never provide any explanation or context inside the response, only the filenames and the code in the format provided. Do not leave any "Note".
