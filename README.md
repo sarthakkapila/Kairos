@@ -1,6 +1,6 @@
 # Kairos
 
-## Getting Started
+## Getting Started 
 To get started with Kairos, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/sarthakkapila/kairos.git`
@@ -9,7 +9,10 @@ To get started with Kairos, follow these steps:
 4. Activate virtual env: `Source kairos/bin/activate` (for windows): `kairos/Scripts/activate`
 4. Install dependencies: `pip install -r requirements.txt`
 
-## High level system design of the app
+## Interactive Demo 
+[Kairos Demo](https://app.supademo.com/demo/clune6g8803vu4r8tlrbbf6nj/cluoesk4f10ye41u920f8uy0z)
+
+## High level system design of the app 
 ### Workflow of kairos
 
 The high level workflow is divided into different steps.
@@ -58,7 +61,7 @@ Finally, Kairos's Creator agent generates and executes Python code to create and
 Following the code generation, Kairos initiates the creation of a Python script utilizing the os module.
 Then it begins organizing the project files and folders generated previously during the coding phase of the project.
 
-## Screenshots-
+## Screenshots
 <img width="938" alt="Screenshot 2024-04-06 at 11 01 44 PM" src="https://github.com/sarthakkapila/Kairos/assets/112886451/29e25360-5207-45ae-9a46-7e95608057dd">
 <img width="997" alt="Screenshot 2024-04-06 at 11 02 08 PM" src="https://github.com/sarthakkapila/Kairos/assets/112886451/3ecff9dd-8a29-4c40-8020-09be12f95067">
 <img width="1534" alt="Screenshot 2024-04-06 at 11 03 28 PM" src="https://github.com/sarthakkapila/Kairos/assets/112886451/2fcd2886-ed49-4f35-8cb5-f259f44bf9d5">
@@ -71,7 +74,7 @@ Then it begins organizing the project files and folders generated previously dur
 <img width="889" alt="Screenshot 2024-04-06 at 7 25 20 AM" src="https://github.com/sarthakkapila/Kairos/assets/112886451/ee1eceb6-7859-4793-9247-df9b1a00d220">
 <img width="787" alt="Screenshot 2024-04-06 at 11 09 16 PM" src="https://github.com/sarthakkapila/Kairos/assets/112886451/31fa45f6-d05a-4977-ac12-2d4f8e1d0f7f">
 
-## Team members - 100X-Devs
+## Team - 100X-Devs
 - Sarthak Kapila (22107038)
 - Shauray Dhingra (22107060)
 - Karanveer Singh (22101003)
