@@ -9,7 +9,7 @@ To get started with Kairos, follow these steps:
 4. Activate virtual env: `Source kairos/bin/activate` (for windows): `kairos/Scripts/activate`
 4. Install dependencies: `pip install -r requirements.txt`
 
-## Interactive Demo 
+## Product Demo 
 [Kairos Demo](https://app.supademo.com/demo/clune6g8803vu4r8tlrbbf6nj/cluoesk4f10ye41u920f8uy0z)
 
 ## High level system design of the app 
