@@ -57,6 +57,7 @@ def welcome_page():
         # st.markdown("----", unsafe_allow_html=True)
         columns = st.columns((1, 1, 1))
         btn = columns[1].button(label="Start Now", on_click=page_switcher, args=(configuration_page,), type="primary")
+        login_btn = columns[1].button(label="Login", on_click=None)
         # st.markdown("----", unsafe_allow_html=True)
         
         # btn = st.button(label="Start Now", on_click=page_switcher, args=(configuration_page,), type="primary")
