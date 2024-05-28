@@ -82,8 +82,3 @@ Then it begins organizing the project files and folders generated previously dur
 <img width="779" alt="Screenshot 2024-04-06 at 11 09 22 PM" src="https://github.com/sarthakkapila/Kairos/assets/112886451/b68dbb69-b626-41e8-8cc5-df002f51b8a3">
 <img width="889" alt="Screenshot 2024-04-06 at 7 25 20 AM" src="https://github.com/sarthakkapila/Kairos/assets/112886451/ee1eceb6-7859-4793-9247-df9b1a00d220">
 <img width="787" alt="Screenshot 2024-04-06 at 11 09 16 PM" src="https://github.com/sarthakkapila/Kairos/assets/112886451/31fa45f6-d05a-4977-ac12-2d4f8e1d0f7f">
-
-## Team - 100X-Devs
-- Sarthak Kapila (22107038)
-- Shauray Dhingra (22107060)
-- Karanveer Singh (22101003)
