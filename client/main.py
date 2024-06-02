@@ -58,6 +58,7 @@ def welcome_page():
         columns = st.columns((1, 1, 1))
         btn = columns[1].button(label="Start Now", on_click=page_switcher, args=(configuration_page,), type="primary")
         # st.markdown("----", unsafe_allow_html=True)
+        columns[1].button("Login", on_click=login_action)
         
         # btn = st.button(label="Start Now", on_click=page_switcher, args=(configuration_page,), type="primary")
         st.image(image="assets/kairos-profile.png", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
@@ -387,6 +388,10 @@ def workspace_page():
                                     )
                                     time.sleep(2)
 
+
+def login_action():
+    st.session_state["messages"].append({"role": "assistant", "content": "Login functionality to be implemented."})
+    st.rerun()
 
 if __name__ == "__main__":
     if "runpage" not in st.session_state:
