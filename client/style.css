@@ -7,11 +7,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Jost:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Outfit:wght@100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 * {
-    font-family: Monaco, monospace !important;
+    /* font-family: Monaco, monospace !important; */
+    font-family: "DM Sans", sans-serif;
 }
-
 p {
     font-size: 20px !important;
     font-weight: 400;    
