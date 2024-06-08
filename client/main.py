@@ -1,5 +1,5 @@
 import sys
-# sys.path.append("/Users/sarthakkapila/Desktop/kairos/")
+sys.path.append("/Users/sarthakkapila/Desktop/kairos/")
 # sys.path.append("C:/Users/Asus/Desktop/kairos-final/Kairos")
 from dotenv import load_dotenv
 
@@ -8,13 +8,13 @@ load_dotenv()
 import os
 import time
 import streamlit as st
-from src.agents.decision_taker import DecisionTaker
-from src.agents.planner import Planner
-from src.agents.researcher import Researcher
-from src.agents.coder import Coder
-from src.agents.project_creator import ProjectCreator
+from agents.decision_taker import DecisionTaker
+from agents.planner import Planner
+from agents.researcher import Researcher
+from agents.coder import Coder
+from agents.project_creator import ProjectCreator
 
-from src.keyword_extractor import SentenceBert
+from keyword_extractor import SentenceBert
 
 from utils import stream_text, search_queries, prepare_coding_files
 
