@@ -1,30 +1,30 @@
-# import sys
-# sys.path.append("/Users/sarthakkapila/Desktop/kairos/Kairos")
-# # sys.path.append("C:/Users/Asus/Desktop/kairos-final/Kairos")
+import sys
+# sys.path.append("/Users/sarthakkapila/Desktop/kairos/")
+# sys.path.append("C:/Users/Asus/Desktop/kairos-final/Kairos")
+from dotenv import load_dotenv
+
+load_dotenv()
 
 import os
 import time
 import streamlit as st
-from agents.decision_taker import DecisionTaker
-from agents.planner import Planner
-from agents.researcher import Researcher
-from agents.coder import Coder
-from agents.project_creator import ProjectCreator
+from src.agents.decision_taker import DecisionTaker
+from src.agents.planner import Planner
+from src.agents.researcher import Researcher
+from src.agents.coder import Coder
+from src.agents.project_creator import ProjectCreator
 
-from keyword_extractor import SentenceBert
+from src.keyword_extractor import SentenceBert
 
 from utils import stream_text, search_queries, prepare_coding_files
 
-
 original_working_dir = os.getcwd()
-
 
 # Loading messages avatars
 kairos_avatar = "assets/kairos-profile.png"
 user_avatar = "assets/user-profile.jpg"
 
 selected_model = None
-google_api_key = None
 cohere_api_key = None
 
 # Set page layout
@@ -44,8 +44,6 @@ if "messages" not in st.session_state:
 def page_switcher(page):
     st.session_state.runpage = page
 
-# st.markdown(btn_style, unsafe_allow_html=True)
-
 def welcome_page():
     with st.container():
         st.title("Welcome to Kairos!", anchor=False)
@@ -53,13 +51,8 @@ def welcome_page():
             """Kairos is an advanced AI software engineer that can understand high-level human instructions, break them down into steps, research relevant information, and write code to achieve the given objective. """
         )
         
-        
-        # st.markdown("----", unsafe_allow_html=True)
         columns = st.columns((1, 1, 1))
         btn = columns[1].button(label="Start Now", on_click=page_switcher, args=(configuration_page,), type="primary")
-        # st.markdown("----", unsafe_allow_html=True)
-        
-        # btn = st.button(label="Start Now", on_click=page_switcher, args=(configuration_page,), type="primary")
         st.image(image="assets/kairos-profile.png", caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
         if btn:
@@ -79,15 +72,7 @@ def configuration_page():
             key="selected_model",
         )
 
-    if st.session_state["selected_model"] == "Gemini-Pro":
-        global google_api_key
-        google_api_key = st.text_input(
-            "Google API key",
-            placeholder="Enter your Google API key",
-            type="password",
-        )
-
-    elif st.session_state["selected_model"] == "Cohere":
+    if st.session_state["selected_model"] == "Cohere":
         global cohere_api_key
         cohere_api_key = st.text_input(
             "Cohere API key",
@@ -115,6 +100,7 @@ def configuration_page():
                     st.error("Please, enter your Cohere API key!")
 
             elif selected_model == "Gemini-Pro":
+                google_api_key = os.getenv("GOOGLE_API_KEY")
                 if google_api_key:
                     os.environ["GOOGLE_API_KEY"] = google_api_key
                     with st.spinner(f"Creating '{project_name}'..."):
@@ -122,14 +108,14 @@ def configuration_page():
                         page_switcher(workspace_page)
                         st.rerun()
                 else:
-                    st.error("Please, enter your Google API key!")
+                    st.error("Google API key not found in environment variables!")
 
         else:
             st.error("Please, enter your project name!")
 
 
 def workspace_page():
-    api_key = google_api_key if selected_model == "Gemini-Pro" else cohere_api_key
+    api_key = os.getenv("GOOGLE_API_KEY") if selected_model == "Gemini-Pro" else cohere_api_key
 
     decision_taker = DecisionTaker(selected_model, api_key)
     planner = Planner(selected_model, api_key)
