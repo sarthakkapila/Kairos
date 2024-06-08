@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/Users/sarthakkapila/Desktop/kairos/")
+# sys.path.append("/Users/sarthakkapila/Desktop/kairos/")
 # sys.path.append("C:/Users/Asus/Desktop/kairos-final/Kairos")
 from dotenv import load_dotenv
 
