@@ -180,12 +180,12 @@ def workspace_page():
 
                 elif response["function"] == "coding_project":
                     st.chat_message("ai", avatar=kairos_avatar).write_stream(
-                        stream_text("Idenified your request as a `coding_project`! ")
+                        stream_text("Identified your request as a `coding_project`! ")
                     )
                     st.session_state.messages.append(
                         {
                             "role": "ai",
-                            "content": "Idenified your request as a `coding_project`!",
+                            "content": "Identified your request as a `coding_project`!",
                         }
                     )
                     time.sleep(0.002)
