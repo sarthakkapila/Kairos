@@ -22,7 +22,10 @@ To get started with Kairos, follow these steps:
 4. Install all dependencies: `pip install -r requirements.txt`
 
 ## Product Demo 
-[Kairos Demo](https://app.supademo.com/demo/clune6g8803vu4r8tlrbbf6nj/cluoesk4f10ye41u920f8uy0z)
+[Kairos Demo](https://app.supademo.com/embed/clune6g8803vu4r8tlrbbf6nj)
+
+> [!IMPORTANT]
+> Please reload the demo 1 or 2 times for it to work properly.
 
 ## High level system design of the app 
 ### Workflow of kairos
