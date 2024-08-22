@@ -32,7 +32,7 @@ To get started with Kairos, follow these steps:
 ### Workflow of kairos
 
 The high level workflow is divided into different steps.
-The user selects a base model, for now Gemini-Pro & ollama (probably).
+The user selects a base model, for now Gemini-Pro.
 When provided with the api. The user is directed to workspace page where they input a prompt. 
 
 ### DecisonTaker 
